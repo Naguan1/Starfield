@@ -5,7 +5,7 @@ class Particle {
   {
     myX=myY =400;
     myAngle= Math.random()*2*Math.PI;
-    mySpeed= Math.random()*10;
+    mySpeed= Math.random()*12;
     myColor= color((int)(Math.random()*256),(int)(Math.random()*256)+128,(int)(Math.random()*256));
   }
   void move() {
@@ -30,7 +30,7 @@ void setup () {
   }
 }
 void draw() {
-  background(0);
+  
   for (int i = 0; i < corpses.length; i++){
     corpses[i].move();
     corpses[i].show();
@@ -41,7 +41,7 @@ class OddBallParticle extends Particle {
   {
     myX=myY =400;
     myAngle= Math.random()*2*Math.PI;
-    mySpeed= Math.random()*10;
+    mySpeed= Math.random()*12;
     myColor= color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   }
   void move() {
@@ -51,7 +51,6 @@ class OddBallParticle extends Particle {
 void show() {
   noStroke();
   fill(myColor);
- rect((float)myX,(float)myY,(float)(Math.random()*15)+10,(float)(Math.random()*10)+5);
+ rect((float)myX,(float)myY,(float)(Math.random()*14)+10,(float)(Math.random()*10)+5);
 }
 }
-
